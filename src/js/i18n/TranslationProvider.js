@@ -24,12 +24,12 @@ const withI18nContext = withContext({
 
 const TranslationProvider = ({ children }) => Children.only(children);
 
-TranslationProvider.propTypes({
+TranslationProvider.propTypes = {
     locale: PropTypes.string.isRequired, // which laguage? ex: 'en', 'fr',...
-    messages: PropTypes.object, // language ditionary
+    messages: PropTypes.object, // language dictionary
     children: PropTypes.element,
-});
+};
 
 const mapStateToProps = state => ({ locale: state.locale });
 
-compose(connect(mapStateToProps), withI18nContext)(TranslationProvider);
+export default compose(connect(mapStateToProps), withI18nContext)(TranslationProvider);

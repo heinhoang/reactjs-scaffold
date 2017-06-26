@@ -28,7 +28,7 @@ Root
 #### App Flow
 * **App** using Admin component & pass props to Admin
   1. **Admin**: Control redux store & render children (render loginPage or Layout component)
-  2. **TranslationProvider**: Support Localization (pass translate function to children) 
+  2. **TranslationProvider**: Support Localization (pass translate function to children)
   3. **Layout**: Control layout & render children based on AdminRoutes
   4. **AdminRoutes**: render customRoutes or CrudRoute ('Restful Routes') (based on props from Resource Component) or dashboard
   5. **CrudRoute**: deligate to Restricted for authentication & then render 'Restful Routes'
@@ -61,3 +61,8 @@ Root
  - **Resource Component** to deal with Resful API
  - **Layout Component** to control app layout
  - **Login/Logout** form
+
+#### Testing
+For windows user ([more here](https://github.com/TylerBrock/mongo-hacker/issues/138))
+1) Download [Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm)
+2) Add the make.exe directory to your PATH variable
