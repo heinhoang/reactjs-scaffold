@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import { PropTypes } from 'prop-types';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import createHistory from 'history/createHashHistory';
 import { Provider } from 'react-redux';
 import { routerReducer, routerMiddleware, ConnectedRouter } from 'react-router-redux';
+import { Switch, Route } from 'react-router-dom';
 import { reducer as formReducer } from 'redux-form';
 
 import USER_LOGOUT from '../actions/authActions';
 import TranslationProvider from '../i18n/TranslationProvider';
 import localReducer from '../reducer/locale';
+import Login from '../components/auth/Login';
 import adminReducer from '../reducer';
 
 const Admin = ({
@@ -16,6 +18,9 @@ const Admin = ({
     messages, // laguage dictionary
     initialState,
     children,
+    title,
+    theme,
+    LoginPage,
 }) => {
     // Grasp all props from Resources component (which will be prepared for Restful implementation)
     const resources = React.Children.map(children, ({ props }) => props) || [];
@@ -48,6 +53,17 @@ const Admin = ({
                 <ConnectedRouter history={history} >
                     <div>
                         {/* Login or render Layout */}
+                        <Switch>
+                            <Route
+                                exact
+                                path="/login"
+                                render={({ location }) => createElement(LoginPage || Login, {
+                                    location,
+                                    title,
+                                    theme,
+                                })}
+                            />
+                        </Switch>
                     </div>
                 </ConnectedRouter>
             </TranslationProvider>

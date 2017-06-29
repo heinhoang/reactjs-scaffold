@@ -61,6 +61,7 @@ Root
  - **Resource Component** to deal with Resful API
  - **Layout Component** to control app layout
  - **Login/Logout** form
+ - test Login.js https://github.com/airbnb/enzyme/issues/947, https://stackoverflow.com/questions/40932838/using-mjacksons-expect-spyon-on-function-from-react-components-props
 
 #### Testing
 For windows user ([more here](https://github.com/TylerBrock/mongo-hacker/issues/138))

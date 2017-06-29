@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { getContext } from 'recompose';
 
-const translate = (BaseComponent) => {
+const Translate = (BaseComponent) => {
     const TranslatedComponent = getContext({
         locale: PropTypes.string.isRequired,
         translate: PropTypes.func.isRequired,
@@ -10,4 +10,4 @@ const translate = (BaseComponent) => {
     return TranslatedComponent;
 };
 
-export default translate;
+export default Translate;
