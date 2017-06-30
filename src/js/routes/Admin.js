@@ -30,7 +30,7 @@ const Admin = ({
         routing: routerReducer,
         form: formReducer,
         locale: localReducer(locale),
-        // admin: adminReducer(resources),
+        admin: adminReducer(resources),
     });
     // Reset state whenever user logout, know more: https://stackoverflow.com/questions/35622588/how-to-reset-the-state-of-a-redux-store
     const resettableAppReducer = (state, action) => appReducer(action.type !== USER_LOGOUT ? state : undefined, action);

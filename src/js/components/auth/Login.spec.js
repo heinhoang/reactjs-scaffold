@@ -22,10 +22,10 @@ const messages = {
         heo: 'geo',
     },
 };
-const props = {
-    location: {},
-    spyOnSubmit: sinon.spy(),
-};
+// const props = {
+//     location: {},
+//     spyOnSubmit: sinon.spy(),
+// };
 const store = mockStore(initialState);
 const context = {
     store,
@@ -72,14 +72,14 @@ describe('<Login /> should works', () => {
     });*/
 
     beforeEach(() => {
-        // container = shallow(<Login {...props} />, {context});
-        container = shallow(
+        container = shallow(<Login />, { context });
+        /*container = shallow(
             <Provider store={store}>
                 <TranslationProvider messages={messages}>
                     <Login {...props} />
                 </TranslationProvider>
             </Provider>,
-        ).dive().dive();
+        ).dive().dive();*/
     });
     it('=> should render itself & children', () => {
         expect(container.length).toEqual(1);
