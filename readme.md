@@ -1,6 +1,6 @@
-# Reactjs Scaffolding
+# Reactjs Scaffold
 ### Front-End Boilerplate
-Iceberg is built with React + Babel + Webpack. It's a solution for start your projects.<br />
+Reactjs Scaffold is built with React + Babel + Webpack. It's a solution for start your projects.<br />
 
 ***
 **Author**: *Hein Hoang*<br />
