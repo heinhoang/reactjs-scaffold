@@ -1,41 +1,48 @@
-![Iceberg logo](https://kevinpy.com/Projects/Iceberg/out/iceberg-logo.png)
-# Iceberg
+# Reactjs Scaffolding
 ### Front-End Boilerplate
 Iceberg is built with React + Babel + Webpack. It's a solution for start your projects.<br />
-<br />
-[![Version](https://img.shields.io/github/release/kevinpy/Iceberg.svg)](https://github.com/kevinpy/Iceberg/releases)
-[![dependencies Status](https://david-dm.org/kevinpy/iceberg/status.svg)](https://david-dm.org/kevinpy/iceberg)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/kevinpy)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1447c0dff5fd49fe93e9c2141ded90e1)](https://www.codacy.com/app/pykevin/Iceberg?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=KevinPy/Iceberg&amp;utm_campaign=Badge_Grade)
+
 ***
-**Author**: *Kevin Py*<br />
-**Website**: <https://kevinpy.com>
+**Author**: *Hein Hoang*<br />
+**Website**: <https://github.com/heinhoang>
 ***
+
 #### Installation
 ```
-$ git clone git@github.com:KevinPy/Iceberg.git
-$ cd Iceberg
+$ git clone git@github.com:heinhoang/reactjs-scaffold.git
+$ cd your folder
 $ npm install
 ```
 #### Scripts
 `npm start` : Launch `webpack-dev-server` with Hot Module Replacement - http://localhost:8080<br />
 `npm run build` : Compile **/src** folder and create **/dist** folder<br />
+
+#### Testing
+For windows user ([more here](https://github.com/TylerBrock/mongo-hacker/issues/138))
+1) Download [Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm)
+2) Add the make.exe directory to your PATH variable
+
 #### Structure
 ```
-/src
-    |- /assets
-        |- /images
-        |- /styles
-            |- /main.scss
-    |- /js
-        |- components
-            |- App.jsx
-            |- NotFound.jsx
+/Root
+    |- e2e
+    |- node_modules
+    |- src
+        |-assets
+        |- js
+            |- i18n
+            |- actions
+            |- constants
+            |- reducers
+            |- saga
+            |- utils
+            |- components
+            |- containers
+            |- routes
     |- index.html
     |- index.js
 ```
-#### TODO
-[ ] Tests<br />
-[x] ESLint<br />
-[ ] Separate Webpack Dev/Prod<br />
-[x] Router
+#### Features
+- Basic scaffold (Transpile ES6/ES7 to ES5, SCSS to CSS)
+- Compile third party scss to css
+- Settup **Automation Testing** feature (follow this [tutorial](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment))
